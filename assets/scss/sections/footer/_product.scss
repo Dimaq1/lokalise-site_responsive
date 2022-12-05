@@ -1,0 +1,10 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.product {
+  @include footer-menu;
+
+  @include sm-min {
+    margin-right: 113px;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.possibility-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 327px;
+  align-items: center;
+  gap: 23px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.39;
+    text-align: center;
+  }
+
+  &__image {
+    order: -1;
+    max-width: 160px;
+    max-height: 120px;
+  }
+
+}

@@ -1,0 +1,23 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+@use "mixins" as *;
+
+.work {
+  @include job-item(row-reverse);
+
+  @include ul-min {
+    margin-bottom: 144px;
+  }
+
+  @include xl-min {
+    gap: 137px;
+  }
+
+  @include ul-lg {
+    margin-bottom: 157px;
+  }
+
+  @include lg {
+    margin-bottom: 90px;
+  }
+}

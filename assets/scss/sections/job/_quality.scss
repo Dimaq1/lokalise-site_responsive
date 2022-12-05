@@ -1,0 +1,11 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+@use "mixins" as *;
+
+.quality {
+  @include job-item;
+  
+  @include xl-min {
+    gap: 137px;
+  }
+}

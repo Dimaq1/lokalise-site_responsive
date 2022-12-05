@@ -1,0 +1,39 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.possibility {
+  background-color: $color-bg-secondary;
+  padding: 120px 0 147px;
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 79px;
+
+    @include md-min {
+      font-size: 50px;
+    }
+    
+    @include md {
+      font-size: 40px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 75px;
+
+    @include xl-lg {
+      gap: $gap-lg;
+    }
+
+    @include md {
+      gap: $gap-xl;
+    }
+  
+  }
+
+}

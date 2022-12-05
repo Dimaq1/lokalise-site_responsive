@@ -1,0 +1,49 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.preview {
+  background-color: $color-bg-light-blue;
+  padding: 53px 0 100px;
+
+  @include lg {
+    padding: 50px 0;
+  }
+
+  &__content {
+    display: flex;
+    gap: $gap-xl * 2;
+
+    @include lg {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: $gap-lg;
+      text-align: center;
+    }
+  }
+
+  &-item {
+    padding: 10px 0;
+
+    &__text {
+      font-weight: 400;
+      line-height: 1.33;
+      margin-bottom: 23px;
+
+      @include xl-min {
+        font-size: 30px;
+      }
+
+      @include xl {
+        font-size: 25px;
+      }
+    }
+
+    &__caption {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.67;
+      margin-bottom: 7px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-menu {
+  grid-area: mnu;
+  display: flex;
+  padding-top: 5px;
+
+  @include xl-lg {
+    flex-wrap: wrap;
+    gap: $gap-lg;
+  }
+
+  @include lg-md {
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+  @include md {
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+
+  @include sm {
+    flex-direction: column;
+    text-align: center;
+  }
+}

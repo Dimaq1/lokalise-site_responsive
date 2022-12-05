@@ -1,0 +1,95 @@
+@use "../presets" as *;
+
+@mixin unlist($m: 0, $p: 0) {
+  margin: $m;
+  padding: $p;
+
+  list-style: none;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+@mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin productivity {
+
+  display: flex;
+  flex-direction: column;
+  max-width: 410px;
+  gap: 45px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.33;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: -8px;
+  }
+
+  &__button {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__picture {
+    order: -1;
+    padding-top: 5px;
+  }
+
+}
+
+@mixin footer-menu {
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 21px;
+  }
+
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+
+  &__link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+}

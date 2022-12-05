@@ -1,0 +1,33 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+@use "mixins" as *;
+
+.time {
+  @include job-item(row-reverse);
+
+  &__content {
+    
+    @include ul-min {
+      padding-right: 70px;
+    }
+
+    @include lg-min {
+      padding-top: 31px;
+    }
+  }
+
+  &__title {
+    
+    @include ul-min {
+      padding-right: 70px;
+    }
+
+    @include ul-lg {
+      padding-right: 30px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 36px;
+  }
+}

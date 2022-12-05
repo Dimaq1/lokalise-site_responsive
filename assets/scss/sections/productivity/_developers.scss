@@ -1,0 +1,15 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.developers {
+  @include productivity;
+  gap: 63px;
+
+  &__content {
+    gap: 33px;
+  }
+
+  &__picture {
+    padding-top: 22px;
+  }
+}

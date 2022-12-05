@@ -1,0 +1,37 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.container {
+  width: min(100% - 40px, 1290px);
+  margin-inline: auto;
+}
+
+.btn {
+  font-size: $font-size-root;
+  min-width: 120px;
+  min-height: 45px;
+  font-weight: 600;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+
+  &--light {
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: $color-white;
+  }
+
+  &--accent {
+    border-color: $color-accent;
+    background-color: $color-accent;
+    color: $color-white;
+  }
+
+  &--black {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

@@ -1,0 +1,6 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.managers {
+  @include productivity;
+}

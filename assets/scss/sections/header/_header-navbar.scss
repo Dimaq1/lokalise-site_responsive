@@ -1,0 +1,31 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-navbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include unlist;
+
+    @include xl-min {
+      gap: $gap 50px;
+    }
+
+    @include xl {
+      gap: 0 $gap;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    line-height: 20px;
+    display: block;
+    padding: 0.5em 0;
+  }
+
+
+}

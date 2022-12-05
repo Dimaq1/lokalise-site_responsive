@@ -1,0 +1,43 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-content {
+  grid-area: cnt;
+
+  @include lg {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 28px;
+  }
+
+  &__picture {
+    margin-bottom: 27px;
+  }
+
+  &__logo {
+    margin-bottom: 8px;
+  }
+
+  &__image-logo {
+    max-width: 80px;
+    max-height: 32px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,45 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+
+.productivity {
+
+  @include sm-min {
+    padding: 154px 0 187px;
+  }
+
+  @include sm {
+    padding: 100px 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 70px;
+
+    @include ul-min {
+      font-size: 50px;
+    }
+
+    @include ul {
+      font-size: 45px;
+      text-align: center;
+    }
+
+    @include sm {
+      font-size: 35px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: $gap-lg;
+    flex-wrap: wrap;
+
+    @include ul {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

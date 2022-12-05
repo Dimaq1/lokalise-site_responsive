@@ -1,0 +1,53 @@
+@use "../../presets/skins" as*;
+@use "../../presets/variables" as *;
+@use "../../mixins" as *;
+
+.brands {
+  color: $color-black;
+  background-color: $color-bg-accent;
+  padding: 105px 0 103px;
+  display: flex;
+
+  @include lg {
+    padding: 43px 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.2;
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto 70px;
+
+    @include lg {
+      margin: 0 auto 30px;
+    }
+
+    @include md {
+      font-size: 40px;
+    }
+
+    @include sm {
+      font-size: 35px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include lg-min {
+      justify-content: space-between;
+    }
+
+    @include lg {
+      flex-wrap: wrap;
+      gap: $gap-xl * 4;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 160px;
+      row-gap: 20px;
+    }
+  }
+}

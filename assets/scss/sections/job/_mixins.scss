@@ -1,0 +1,92 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+@mixin job-item($dir: row) {
+  display: flex;
+  align-items: center;
+  padding: 90px 0 0;
+
+  @if $dir == row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  @include ul-min {
+    gap: 138px;
+    margin-bottom: 157px;
+  }
+
+  @include ul-lg {
+    gap: 100px;
+    margin-bottom: 50px;
+  }
+
+  @include lg {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  &__content {
+    color: $color-black;
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 30px;
+
+    @include lg-min {
+      font-size: 50px;
+    }
+
+    @include lg {
+      font-size: 40px;
+    }
+
+    @include sm {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+    @include sm {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+
+    @include lg {
+      margin-bottom: 20px;
+    }
+
+    @include sm {
+      font-size: 1rem;
+    }
+  }
+
+  &__image {
+
+    @include xl-sm {
+      max-width: 500px;
+    }
+
+    @include sm {
+      max-width: 400px;
+    }
+
+    @include xx {
+      max-width: 300px;
+    }
+  }
+}

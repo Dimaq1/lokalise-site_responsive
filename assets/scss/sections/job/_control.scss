@@ -1,0 +1,11 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+@use "mixins" as *;
+
+.control {
+  @include job-item;
+  
+  @include ul-min {
+    gap: 165px;
+  }
+}

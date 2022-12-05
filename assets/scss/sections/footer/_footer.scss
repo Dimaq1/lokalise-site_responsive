@@ -1,0 +1,24 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  background-color: $color-bg-gray;
+  padding: 92px 0 43px;
+
+  &__grid {
+    display: grid;
+    gap: 140px;
+
+    @include lg-min {
+      grid-template-areas: "cnt mnu" "asd asd";
+      grid-template-columns: 300px 1fr;
+      grid-template-rows: 594px;
+    }
+
+    @include lg {
+      grid-template-areas: "cnt" "mnu" "asd";
+      grid-template-rows: 450px;
+    }
+  }
+
+}

@@ -1,0 +1,109 @@
+@use "../../mixins" as *;
+@use "../../presets/variables" as *;
+
+.header-content {
+  display: grid;
+  row-gap: 50px;
+
+  @include xl-min {
+    grid-template-areas: "ttl pct" "dsp pct" "act pct" "nts pct";
+    grid-template-columns: 580px 1fr;
+  }
+
+  @include xl-lg {
+    grid-template-areas: "ttl pct" "dsp pct" "act pct" "nts pct";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include lg {
+    grid-template-areas: "ttl" "dsp" "pct" "act" "nts";
+    text-align: center;
+  }
+
+  @include md {
+    row-gap: $gap-lg * 1.5;
+  }
+
+  &__title {
+    grid-area: ttl;
+    line-height: 1.08;
+    margin: 0;
+    font-weight: 600;
+
+    @include xl-min {
+      font-size: 65px;
+    }
+
+    @include xl-lg {
+      font-size: 55px;
+    }
+
+    @include lg {
+      font-size: 45px;
+    }
+  }
+
+  &__description {
+    grid-area: dsp;
+    line-height: 1.4;
+
+    @include xl-min {
+      font-size: 25px;
+      padding-right: 70px;
+    }
+
+    @include xl-lg {
+      font-size: 20px;
+      padding-right: 40px;
+    }
+
+    @include lg {
+      font-size: 20px;
+    }
+  }
+
+  &__actions {
+    grid-area: act;
+    display: flex;
+    gap: $gap-sm;
+    margin-bottom: -25px;
+
+    @include lg {
+      justify-content: center;
+    }
+  }
+
+  &__notes {
+    grid-area: nts;
+    line-height: 1.67;
+  }
+
+  &__picture {
+    grid-area: pct;
+  }
+
+  &__image {
+    width: 100%;
+
+    @include lg-min {
+      transform: translateX(-42px) translateY(22px);
+    }
+
+    @include lg {
+      width: 50%;
+    }
+  }
+}
+
+.btn--big {
+
+  @include xl-min {
+    min-width: 160px;
+    min-height: 60px;
+  }
+
+  @include lg {
+    min-width: 120px;
+    min-height: 45px;
+  }
+}
